@@ -1,0 +1,24 @@
+.section{
+    width: 100%;
+    section{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        mat-card {
+            margin: 5px;
+            transition: 1s ease;
+            mat-card-content{
+                width: 250px;
+                height: 250px;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            &:hover{
+                transform: scale(1.01);
+                cursor: pointer;
+            }
+        }
+    }
+}
