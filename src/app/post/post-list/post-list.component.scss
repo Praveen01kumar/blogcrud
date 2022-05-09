@@ -1,23 +1,71 @@
-.section{
+.section {
     width: 100%;
-    section{
+
+    section {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+        margin: 0 auto;
+
         mat-card {
             margin: 5px;
             transition: 1s ease;
-            mat-card-content{
+
+            mat-card-content {
                 width: 250px;
                 height: 250px;
-                img{
+
+                img {
                     width: 100%;
                     height: auto;
                 }
+
+                p {
+                    small {
+                        span {
+                            &:hover {
+                                color: chocolate;
+                                border-bottom: 1px solid chocolate;
+                                cursor: pointer;
+                            }
+
+                            transition: 0.6s ease-in-out;
+                        }
+                    }
+                }
+
+                #description {
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    display: block;
+                    overflow: hidden;
+                    width: 15em;
+                }
             }
-            &:hover{
+
+            &:hover {
                 transform: scale(1.01);
-                cursor: pointer;
+            }
+
+            mat-card-actions {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                #Read-more {
+                    margin: 0;
+                    padding: 0 10px;
+                }
+
+                button {
+                    &:hover {
+                        color: white;
+                        background-color: chocolate;
+                    }
+
+                    transition: 0.6s ease-in-out;
+                }
+
             }
         }
     }

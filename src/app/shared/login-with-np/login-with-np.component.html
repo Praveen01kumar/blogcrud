@@ -1,0 +1,86 @@
+<mat-tab-group animationDuration="0ms">
+    <mat-tab label="Sign Up">
+        <form class="example-form">
+            <table class="example-full-width" >
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width form-group" appearance="fill" cellspacing="0">
+                            <mat-label>First name</mat-label>
+                            <input matInput type="text" class="form-control" [formControl]="nameFormControl" placeholder="Praveen">
+                            <mat-error *ngIf="nameFormControl.hasError('required')">
+                                First name is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="example-full-width form-group" appearance="fill">
+                            <mat-label>Last Name</mat-label>
+                            <input matInput type="text" class="form-control"  [formControl]="nameFormControl" placeholder="Kumar">
+                            <mat-error *ngIf="nameFormControl.hasError('required')">
+                                Last name is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </td>
+                </tr>
+            </table>
+            <mat-form-field class="example-full-width form-group" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input type="email" class="form-control"  matInput [formControl]="emailFormControl" [(ngModel)]="email" placeholder="Ex. pat@example.com">
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                    Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Email is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width form-group" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input type="password" class="form-control" [(ngModel)]="password"  matInput [formControl]="passwordFormControl">
+                <mat-error *ngIf="passwordFormControl.hasError('required')">
+                    Password is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <button mat-raised-button class="example-full-width" color="primary" (click)="signUp()" >Sign Up</button>
+        </form>
+    </mat-tab>
+
+    <mat-tab label="Sign In">
+        <form class="example-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input type="email" class="form-control" matInput [formControl]="emailFormControl" [(ngModel)]="email" placeholder="Ex. pat@example.com">
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                    Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Email is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput [formControl]="passwordFormControl" class="form-control" [(ngModel)]="password">
+                <mat-error *ngIf="passwordFormControl.hasError('required')">
+                    Password is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+<button mat-raised-button class="example-full-width" color="primary" (click)="SignInWithUserId()">Sign In</button>
+        </form>
+    </mat-tab>
+    <mat-tab label="Forgot Password">
+        <form class="example-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                    Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Email is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <button mat-raised-button class="example-full-width" color="primary">Sent Reset Link</button>
+        </form>
+    </mat-tab>
+</mat-tab-group>
+
+

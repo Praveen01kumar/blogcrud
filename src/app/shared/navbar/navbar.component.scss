@@ -1,3 +1,9 @@
-.space{
+.space {
     flex: 1 1 auto;
+}
+
+@media screen and (max-width: 480px) {
+    .author {
+        display: none;
+    }
 }

@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { environment } from 'src/environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
@@ -13,6 +12,8 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { PostModule } from './post/post.module';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthenticateService } from './authenticate.service';
+
 
 const routes:Routes = [
   {path:'' , redirectTo:'/post', pathMatch:'full'},
@@ -37,7 +38,8 @@ const routes:Routes = [
     SharedModule,
     PostModule,
   ],
-  providers: [],
+  exports:[RouterModule],
+  providers: [AuthenticateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

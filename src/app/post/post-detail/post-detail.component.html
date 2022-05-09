@@ -28,7 +28,7 @@
                     {{post.content}}
                 </mat-card-content>
 
-                <mat-card-actions align="end" *ngIf="auth.currentUserId === post.authorId">
+                <mat-card-actions align="end" *ngIf="auth.authenticated">
                     <button mat-button (click)="editing=true">
                         <mat-icon class="mat-18">edit</mat-icon>
                     </button>

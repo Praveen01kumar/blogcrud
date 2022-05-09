@@ -1,32 +1,37 @@
-.viewmode{
+.viewmode {
     width: 80%;
     margin: 1rem auto;
-    mat-form-field{
+
+    mat-form-field {
         width: 100%;
         margin-top: 1rem;
-        textarea{
+
+        textarea {
             height: 20rem;
         }
     }
 }
 
-.section{
+.section {
     width: 80%;
     margin: 0px auto;
-    mat-card{
+
+    mat-card {
         width: auto;
         margin: 1rem 0rem;
-        img{
+
+        img {
             width: 100%;
             height: auto;
             margin: 0 0 1rem 0;
         }
-        mat-card-content{
+
+        mat-card-content {
             width: 100%;
             height: auto;
             flex-wrap: wrap;
             word-wrap: break-word;
         }
-        
+
     }
 }
