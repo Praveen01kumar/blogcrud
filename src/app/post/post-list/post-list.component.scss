@@ -8,13 +8,17 @@
         mat-card {
             margin: 5px;
             transition: 1s ease;
+            border: 2px solid grey;
             mat-card-content {
                 width: 250px;
                 height: 250px;
                 .mat-image {
-                    width: 250px;
+                    width: 236px;
                     height: 110px;
                     overflow: hidden;
+                    border: 1px solid rgb(232, 232, 232);
+                    border-radius: 5px;
+                    padding: 5px;
                 }
                 img {
                     width: 100%;
@@ -42,6 +46,7 @@
             }
             &:hover {
                 transform: scale(1.01);
+                box-shadow: 0 0 5px rebeccapurple;
             }
             mat-card-actions {
                 display: flex;

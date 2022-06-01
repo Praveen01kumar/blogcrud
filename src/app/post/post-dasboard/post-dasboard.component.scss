@@ -8,11 +8,59 @@ section{
         height: 15rem;
     }
 }
+@media (max-width:500px){
+    .uploaedimg{
+        width: 50%;
+    }
+}
+
+@media (min-width:501px) and (max-width:800px){
+    .uploaedimg{
+        width: 40%;
+    }
+}
+@media (min-width:801px) and (max-width:1365px){
+    .uploaedimg{
+        width: 35%;
+    }
+}
+
+@media (min-width:1366px){
+    .uploaedimg{
+        width: 30%;
+    }
+}
+
 .uploaedimg{
-    width: 80%;
     margin: 1rem auto;
+    height: 20vh;
     img{
         width: 100%;
-        height: auto;
+        height: 100%;
     }
+}
+#file{
+    display: none;
+}
+.file_input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.file_input{
+    label{
+     background-color: #ff4081;
+     padding: 10px 15px;
+     box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 20%), 0px 0px 0px 0px rgb(0 0 0 / 14%), 0px 0px 0px 0px rgb(0 0 0 / 12%);
+     border-radius: 5px;
+     font-size: 14px;
+     font-weight: 500;
+     font-family: Roboto, "Helvetica Neue", sans-serif;
+     color: white;
+     cursor: pointer;
+    }
+    margin-bottom: 20px;
+}
+mat-progress-bar{
+    margin-bottom: 20px;
 }

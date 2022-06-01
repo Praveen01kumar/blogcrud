@@ -7,18 +7,25 @@
                 </mat-panel-title>
             </mat-expansion-panel-header>
             <br>
-            <mat-form-field>
+            <mat-form-field appearance="fill">
                 <input matInput placeholder="Post Title" [(ngModel)]="title">
             </mat-form-field>
             <br>
-            <input type="file" name="file" id="file" (change)="uploadImage($event)">
-            <div [hidden]="!uploadPercent">
-                <mat-progress-bar mode="determinate" value="{{uploadPercent | async}}"></mat-progress-bar>
-            </div>
             <div [hidden]="!image" class="uploaedimg">
                 <img [src]="image || '//:0'" alt="">
             </div>
-            <mat-form-field>
+            <div class="file_input">
+                <form>
+                    <input type="file" name="file" id="file" (change)="uploadImage($event)">
+                    <label for="file"> Select Image</label>
+                </form>
+            </div>
+
+            <div [hidden]="!uploadPercent">
+                <mat-progress-bar mode="determinate" value="{{uploadPercent | async}}"></mat-progress-bar>
+            </div>
+
+            <mat-form-field appearance="fill">
                 <textarea matInput placeholder="Post Content" [(ngModel)]="content"></textarea>
             </mat-form-field><br>
             <button mat-raised-button color="accent" (click)="createPost()"
